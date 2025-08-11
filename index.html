@@ -11,7 +11,7 @@
   <meta property="og:type" content="website">
   <meta property="og:title" content="v2RayTun">
   <meta property="og:description" content="Поддержка Windows, macOS, Linux, iOS и Android. Подключение за 3 шага.">
-  <meta property="og:image" content="https://dummyimage.com/1200x630/000/fff.png&text=v2RayTun+VPN">
+  <meta property="og:image" content="https://dummyimage.com/1200x630/000/fff.png&text=v2RayTun">
   <meta name="twitter:card" content="summary_large_image">
 
   <link rel="icon" type="image/svg+xml" href="logo.svg">
@@ -44,133 +44,40 @@
       .menu.open{ display:flex; flex-direction:column; position:absolute; top:68px; left:12px; right:12px; padding:16px; border:1px solid var(--glass-brd); background:rgba(15,15,15,.85); backdrop-filter:blur(14px); border-radius:16px; }
     }
 
-    /* Hero */
     .hero{ padding:10px 0; background: radial-gradient(60% 120% at 100% 0%, rgba(255,255,255,.08), transparent 60%), radial-gradient(80% 100% at 0% 0%, rgba(255,255,255,.06), transparent 70%); }
     .hero-grid{ display:grid; grid-template-columns:1fr 1fr; gap:28px; align-items:stretch; }
-    .h-title{ font-size:clamp(36px,6vw,64px); font-weight:800; line-height:1.1; margin-top: 28px; margin-bottom: 28px;}
-    .flag-note{
-      display:inline-flex;
-      align-items:center;
-      gap:8px;
-      margin-top:10px;
-      padding:8px 12px;
-      border:1px solid var(--glass-brd);
-      background:var(--glass-bg);
-      border-radius:999px;
-      font-size:14px;
-      color:#fff;
-    }
-    .flag-note img{
-      width:18px;
-      height:18px;
-      object-fit:contain;
-      display:block;
-    }
+    .h-title{ font-size:clamp(36px,6vw,64px); font-weight:800; line-height:1.1; margin-top:28px; margin-bottom:28px; }
+    .flag-note{ display:inline-flex; align-items:center; gap:8px; margin-top:10px; padding:8px 12px; border:1px solid var(--glass-brd); background:var(--glass-bg); border-radius:999px; font-size:14px; color:#fff; }
+    .flag-note img{ width:18px; height:18px; object-fit:contain; display:block; }
     .h-sub{ font-size:clamp(16px,2.6vw,22px); color:var(--muted); margin-top:14px; }
     .hero-actions{ display:flex; gap:12px; margin-top:22px; flex-wrap:wrap; }
     .glass{ background:var(--glass-bg); border:1px solid var(--glass-brd); border-radius:var(--radius); box-shadow:var(--shadow); }
     .hero-card{ padding:18px; }
     .chip{ display:inline-flex; align-items:center; gap:8px; padding:8px 12px; border-radius:999px; border:1px solid var(--glass-brd); background:var(--glass-bg); font-size:13px; color:var(--muted); }
 
-    /* Sections */
     section{ padding:0; }
     .section-title{ font-size:48px; font-weight:800; margin-bottom:20px; }
     .grid{ display:grid; grid-template-columns:repeat(3,1fr); gap:18px; }
 
-    /* How */
-    .how-grid{
-      display:grid;
-      grid-template-columns:1fr 1fr;
-      gap:32px;
-      align-items:start;
-    }
+    .how-grid{ display:grid; grid-template-columns:1fr 1fr; gap:32px; align-items:start; }
+    .how-video{ padding:14px; border-radius:18px; border:1px solid var(--glass-brd); background:var(--glass-bg); }
+    .how-video-label{ font-size:16px; font-weight:700; margin-bottom:10px; }
+    .how-video-el{ width:100%; border-radius:16px; display:block; }
 
-    /* Видео */
-    .how-video{
-      padding:14px;
-      border-radius:18px;
-      border:1px solid var(--glass-brd);
-      background:var(--glass-bg);
-    }
-    .how-video-label{
-      font-size:16px;
-      font-weight:700;
-      margin-bottom:10px;
-    }
-    .how-video-el{
-      width:100%;
-      border-radius:16px;
-      display:block;
-    }
-
-    /* Шаги */
-    .how-steps{
-      display:flex;
-      flex-direction:column;
-      gap:28px;
-      position:relative;
-    }
-    .how-step{
-      display:flex;
-      align-items:flex-start;
-      gap:14px;
-      position:relative;
-    }
-    .how-step:not(:last-child)::after{
-      content:"";
-      position:absolute;
-      left:18px;              /* центр круга (36 / 2) */
-      top:36px;               /* снизу от круга */
-      bottom:-28px;           /* тянем линию к следующему шагу */
-      width:2px;
-      background:var(--glass-brd);
-    }
-    .how-step-circle{
-      flex-shrink:0;
-      width:36px;
-      height:36px;
-      background:#fff;
-      color:#000;
-      border-radius:50%;
-      display:flex;
-      align-items:center;
-      justify-content:center;
-      font-weight:700;
-      font-size:16px;
-    }
-    .how-step-content h3{
-      margin:0 0 4px 0;       /* компактнее заголовок шага */
-      font-size:18px;
-    }
-
-    /* Кнопки шагов */
-    .how-btn{
-      margin-top:8px;
-      display:inline-flex;
-      align-items:center;
-      gap:8px;
-      padding:10px 14px;
-      border-radius:8px;
-      background:#fff;
-      color:#000;
-      font-weight:600;
-      text-decoration:none;
-      transition:transform .15s ease;
-    }
+    .how-steps{ display:flex; flex-direction:column; gap:28px; position:relative; }
+    .how-step{ display:flex; align-items:flex-start; gap:14px; position:relative; }
+    .how-step:not(:last-child)::after{ content:""; position:absolute; left:18px; top:36px; bottom:-28px; width:2px; background:var(--glass-brd); }
+    .how-step-circle{ flex-shrink:0; width:36px; height:36px; background:#fff; color:#000; border-radius:50%; display:flex; align-items:center; justify-content:center; font-weight:700; font-size:16px; }
+    .how-step-content h3{ margin:0 0 4px 0; font-size:18px; }
+    .how-btn{ margin-top:8px; display:inline-flex; align-items:center; gap:8px; padding:10px 14px; border-radius:8px; background:#fff; color:#000; font-weight:600; text-decoration:none; transition:transform .15s ease; }
     .how-btn:hover{ transform:translateY(-1px); }
-
-    .key-btn{
-      background:#0088cc;
-      color:#fff;
-    }
+    .key-btn{ background:#0088cc; color:#fff; }
     .key-btn svg path{ fill:#fff; }
 
-    /* Адаптив */
     @media (max-width:900px){
       .how-grid{ grid-template-columns:1fr; }
     }
 
-    /* Pricing */
     .px-wrap{ padding:20px; border-radius:28px; border:1px solid var(--glass-brd); background: radial-gradient(120% 140% at 100% 0%, rgba(255,255,255,.06), transparent 60%), linear-gradient(180deg, rgba(255,255,255,.04), rgba(255,255,255,.02)); }
     .px-top{ display:grid; grid-template-columns:.4fr .9fr; gap:12px; margin-bottom:12px; }
     .px-card{ padding:14px; border-radius:16px; border:1px solid var(--glass-brd); background:linear-gradient(180deg, rgba(255,255,255,.06), rgba(255,255,255,.02)); }
@@ -184,31 +91,9 @@
     .px-note{ margin-top:6px; font-size:12px; color:var(--muted); }
     .px-infoTitle{ margin:0 0 6px; font-size:18px; }
     .px-infoText{ margin:0; color:var(--muted); }
-    .px-cta{
-      display:flex;
-      justify-content:center;
-      align-items:center;
-      gap:10px;
-      width:100%;
-      padding:14px 16px;
-      border-radius:12px;
-      background:#0088cc;
-      color:#fff;
-      font-weight:700;
-      text-decoration:none;
-      margin:8px 0 14px;
-      box-shadow:none;
-      transition:transform .15s ease, filter .15s ease, box-shadow .15s ease;
-    }
-    .px-cta:hover{
-      transform:translateY(-1px);
-      filter:brightness(1.05);
-      box-shadow:0 8px 24px rgba(0,136,204,.35);
-    }
-    .px-ctaIcon svg{
-      display:block;
-      fill:#fff;
-    }
+    .px-cta{ display:flex; justify-content:center; align-items:center; gap:10px; width:100%; padding:14px 16px; border-radius:12px; background:#0088cc; color:#fff; font-weight:700; text-decoration:none; margin:8px 0 14px; box-shadow:none; transition:transform .15s ease, filter .15s ease, box-shadow .15s ease; }
+    .px-cta:hover{ transform:translateY(-1px); filter:brightness(1.05); box-shadow:0 8px 24px rgba(0,136,204,.35); }
+    .px-ctaIcon svg{ display:block; fill:#fff; }
     .px-mini{ padding:14px; border-radius:14px; border:1px solid var(--glass-brd); background:linear-gradient(180deg, rgba(255,255,255,.05), rgba(255,255,255,.02)); color:#fff; text-align:center; }
     .px-mini--full{ width:100%; }
     .px-miniTitle{ margin:0; font-size:16px; }
@@ -216,54 +101,22 @@
     .card{ padding:18px; }
     .card h3{ margin:0 0 8px 0; font-size:18px; }
     .muted{ color:var(--muted); }
-    .steps{ display:grid; grid-template-columns:repeat(3,1fr); gap:18px; }
-    .step-num{ font-weight:800; font-size:12px; letter-spacing:.2em; color:#000; background:#fff; border-radius:999px; padding:6px 10px; display:inline-block; margin-bottom:10px; }
 
     .screen{ aspect-ratio:12/10; border-radius:18px; border:1px solid var(--glass-brd); overflow:hidden; background:linear-gradient(180deg, rgba(255,255,255,.06), rgba(255,255,255,.02)); display:flex; align-items:flex-end; justify-content:center; }
     .hero-illustration{ width:95%; height:95%; object-fit:contain; object-position:bottom center; }
 
-    /* Download pills */
     .dl-pills{ display:grid; grid-template-columns:repeat(3,1fr); gap:14px 18px; }
-    .dl-pill {
-      display: flex;
-      align-items: center;
-      justify-content: space-between; /* чтобы svg ушёл вправо */
-      gap: 12px;
-      padding: 14px 18px;
-      border-radius: 999px;
-      border: 1px solid var(--glass-brd);
-      background: var(--glass-bg);
-      text-decoration: none;
-      transition: transform .15s ease, box-shadow .15s ease;
-    }
-    .dl-pill:hover {
-      transform: translateY(-1px);
-      box-shadow: var(--shadow);
-    }
-    .dl-pill img {
-      width: 22px;
-      height: 22px;
-      object-fit: contain;
-    }
-    .dl-pill span {
-      font-size: 16px;
-      font-weight: 600;
-      color: #fff;
-      flex: 1;
-    }
-    .dl-icon {
-      width: 22px;
-      height: 22px;
-      flex-shrink: 0;
-    }
+    .dl-pill{ display:flex; align-items:center; justify-content:space-between; gap:12px; padding:14px 18px; border-radius:999px; border:1px solid var(--glass-brd); background:var(--glass-bg); text-decoration:none; transition:transform .15s ease, box-shadow .15s ease; }
+    .dl-pill:hover{ transform:translateY(-1px); box-shadow:var(--shadow); }
+    .dl-pill img{ width:22px; height:22px; object-fit:contain; }
+    .dl-pill span{ font-size:16px; font-weight:600; color:#fff; flex:1; }
+    .dl-icon{ width:22px; height:22px; flex-shrink:0; }
     .download{ margin-top:8px; margin-bottom:24px; }
 
-    /* Compat chips */
     .compat{ display:flex; gap:10px; flex-wrap:wrap; margin-top:12px; }
     .chip--icon{ display:inline-flex; align-items:center; gap:8px; padding:8px 12px; border-radius:999px; border:1px solid var(--glass-brd); background:var(--glass-bg); font-size:13px; color:#fff; }
     .chip--icon img{ width:16px; height:16px; object-fit:contain; }
 
-    /* FAQ */
     .accordion{ display:grid; gap:12px; }
     .acc-item{ border-radius:16px; border:1px solid var(--glass-brd); background:var(--glass-bg); overflow:hidden; }
     .acc-head{ padding:16px; display:flex; justify-content:space-between; cursor:pointer; }
@@ -271,18 +124,14 @@
     .acc-body-inner{ padding:0 16px 16px 16px; color:var(--muted); }
     .acc-item.open .acc-body{ max-height:420px; }
 
-    /* Footer */
     footer{ border-top:1px solid var(--glass-brd); background:rgba(10,10,10,.7); backdrop-filter:saturate(140%) blur(10px); }
     .footer-grid{ display:grid; grid-template-columns:2fr 1fr 1fr; gap:18px; }
-    .small{ font-size:12px; color:var(--muted); }
 
-    /* Utilities */
     .sr-only:not(:focus):not(:active){ position:absolute!important; clip:rect(1px,1px,1px,1px); padding:0!important; border:0!important; height:1px!important; width:1px!important; overflow:hidden; }
 
     @media (max-width:900px){
       .hero-grid{ grid-template-columns:1fr; }
       .grid{ grid-template-columns:1fr; }
-      .steps{ grid-template-columns:1fr; }
       .px-top{ grid-template-columns:1fr; }
       .dl-pills{ grid-template-columns:1fr; }
       .footer-grid{ grid-template-columns:1fr; }
@@ -310,251 +159,222 @@
   </header>
 
   <main>
-  <!-- Hero -->
-  <section class="hero">
-    <div class="container hero-grid">
-      <div>
-        <div class="chip">VLESS VPN</div>
-        <h1 class="h-title">v2RayTun — лучший VPN в 2025 году</h1>
-        <div class="flag-note">
-          <img src="ru.png" alt="" aria-hidden="true">
-          <span>Стабильно работает в России и СНГ</span>
+    <section class="hero">
+      <div class="container hero-grid">
+        <div>
+          <div class="chip">VLESS</div>
+          <h1 class="h-title">v2RayTun — лучший VPN в 2025 году</h1>
+          <div class="flag-note">
+            <img src="ru.png" alt="">
+            <span>Стабильно работает в России и СНГ</span>
+          </div>
+          <p class="h-sub">Минимальные задержки и стабильное соединение на любом устройстве.</p>
+          <div class="hero-actions">
+            <a class="cta" href="#download" rel="noopener">Загрузить последнюю версию</a>
+            <a class="cta" href="https://t.me/SaturnVPN_bot?start=v2raytun" target="_blank" rel="noopener">Получить ключ</a>
+            <a class="cta" style="background:transparent;color:#fff;border:1px solid var(--glass-brd)" href="#how">Как подключиться?</a>
+          </div>
         </div>
-        <p class="h-sub">Минимальные задержки и стабильное соединение на любом устройстве.</p>
-        <div class="hero-actions">
-          <a class="cta" href="#download" rel="noopener">Загрузить последнюю версию</a>
-          <a class="cta" href="https://t.me/SaturnVPN_bot?start=v2raytun" target="_blank" rel="noopener">Получить ключ</a>
-          <a class="cta" style="background:transparent;color:#fff;border:1px solid var(--glass-brd)" href="#how">Как подключиться?</a>
+
+        <div class="glass hero-card">
+          <div class="screen">
+            <img src="hero.png" alt="Экран приложения v2RayTun" class="hero-illustration">
+          </div>
+          <div class="compat" style="margin-top:12px">
+            <span class="chip--icon"><img src="windows.svg" alt=""> Windows</span>
+            <span class="chip--icon"><img src="macos.svg" alt=""> macOS</span>
+            <span class="chip--icon"><img src="ios.svg" alt=""> iOS / iPadOS</span>
+            <span class="chip--icon"><img src="android.svg" alt=""> Android</span>
+            <span class="chip--icon"><img src="androidtv.svg" alt=""> Android TV</span>
+          </div>
         </div>
       </div>
+    </section>
 
-      <div class="glass hero-card">
-        <div class="screen">
-          <img src="hero.png" alt="Экран приложения v2RayTun" class="hero-illustration">
-        </div>
-        <div class="compat" style="margin-top:12px">
-          <span class="chip--icon"><img src="windows.svg" alt="" aria-hidden="true"> Windows</span>
-          <span class="chip--icon"><img src="macos.svg" alt="" aria-hidden="true"> macOS</span>
-          <span class="chip--icon"><img src="ios.svg" alt="" aria-hidden="true"> iOS / iPadOS</span>
-          <span class="chip--icon"><img src="android.svg" alt="" aria-hidden="true"> Android</span>
-          <span class="chip--icon"><img src="androidtv.svg" alt="" aria-hidden="true"> Android TV</span>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Download v2RayTun -->
-  <section id="download" aria-label="Загрузка v2RayTun">
-    <div class="container">
-      <div class="download">
-        <h2 class="section-title">Скачать v2RayTun</h2>
-        <div class="dl-pills">
-          <a class="dl-pill glass" href="https://apps.apple.com/en/app/v2raytun/id6476628951" target="_blank" rel="noopener">
-            <img src="ios.svg" alt="" aria-hidden="true">
-            <span>v2RayTun на iPhone</span>
-            <svg class="dl-icon" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M8 12L3 7L4.4 5.55L7 8.15V0H9V8.15L11.6 5.55L13 7L8 12ZM2 16C1.45 16 0.979333 15.8043 0.588 15.413C0.196666 15.0217 0.000666667 14.5507 0 14V11H2V14H14V11H16V14C16 14.55 15.8043 15.021 15.413 15.413C15.0217 15.805 14.5507 16.0007 14 16H2Z" fill="white"/>
-            </svg>
-          </a>
-          <a class="dl-pill glass" href="https://play.google.com/store/apps/details?id=com.v2raytun.android" target="_blank" rel="noopener">
-            <img src="android.svg" alt="" aria-hidden="true">
-            <span>v2RayTun на Android</span>
-            <svg class="dl-icon" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M8 12L3 7L4.4 5.55L7 8.15V0H9V8.15L11.6 5.55L13 7L8 12ZM2 16C1.45 16 0.979333 15.8043 0.588 15.413C0.196666 15.0217 0.000666667 14.5507 0 14V11H2V14H14V11H16V14C16 14.55 15.8043 15.021 15.413 15.413C15.0217 15.805 14.5507 16.0007 14 16H2Z" fill="white"/>
-            </svg>
-          </a>
-          <a class="dl-pill glass" href="https://storage.v2raytun.com/v2RayTun_Setup.exe" target="_blank" rel="noopener">
-            <img src="windows.svg" alt="" aria-hidden="true">
-            <span>v2RayTun на Windows</span>
-            <svg class="dl-icon" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M8 12L3 7L4.4 5.55L7 8.15V0H9V8.15L11.6 5.55L13 7L8 12ZM2 16C1.45 16 0.979333 15.8043 0.588 15.413C0.196666 15.0217 0.000666667 14.5507 0 14V11H2V14H14V11H16V14C16 14.55 15.8043 15.021 15.413 15.413C15.0217 15.805 14.5507 16.0007 14 16H2Z" fill="white"/>
-            </svg>
-          </a>
-          <a class="dl-pill glass" href="https://apps.apple.com/en/app/v2raytun/id6476628951" target="_blank" rel="noopener">
-            <img src="macos.svg" alt="" aria-hidden="true">
-            <span>v2RayTun на MacBook</span>
-            <svg class="dl-icon" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M8 12L3 7L4.4 5.55L7 8.15V0H9V8.15L11.6 5.55L13 7L8 12ZM2 16C1.45 16 0.979333 15.8043 0.588 15.413C0.196666 15.0217 0.000666667 14.5507 0 14V11H2V14H14V11H16V14C16 14.55 15.8043 15.021 15.413 15.413C15.0217 15.805 14.5507 16.0007 14 16H2Z" fill="white"/>
-            </svg>
-          </a>
-          <a class="dl-pill glass" href="https://apps.apple.com/en/app/v2raytun/id6476628951" target="_blank" rel="noopener">
-            <img src="ios.svg" alt="" aria-hidden="true">
-            <span>v2RayTun на iPad</span>
-            <svg class="dl-icon" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M8 12L3 7L4.4 5.55L7 8.15V0H9V8.15L11.6 5.55L13 7L8 12ZM2 16C1.45 16 0.979333 15.8043 0.588 15.413C0.196666 15.0217 0.000666667 14.5507 0 14V11H2V14H14V11H16V14C16 14.55 15.8043 15.021 15.413 15.413C15.0217 15.805 14.5507 16.0007 14 16H2Z" fill="white"/>
-            </svg>
-          </a>
-          <a class="dl-pill glass" href="https://play.google.com/store/apps/details?id=com.v2raytun.android" target="_blank" rel="noopener">
-            <img src="androidtv.svg" alt="" aria-hidden="true">
-            <span>v2RayTun на Android TV</span>
-            <svg class="dl-icon" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M8 12L3 7L4.4 5.55L7 8.15V0H9V8.15L11.6 5.55L13 7L8 12ZM2 16C1.45 16 0.979333 15.8043 0.588 15.413C0.196666 15.0217 0.000666667 14.5507 0 14V11H2V14H14V11H16V14C16 14.55 15.8043 15.021 15.413 15.413C15.0217 15.805 14.5507 16.0007 14 16H2Z" fill="white"/>
-            </svg>
-          </a>
+    <section id="download" aria-label="Загрузка v2RayTun">
+      <div class="container">
+        <div class="download">
+          <h2 class="section-title">Скачать v2RayTun</h2>
+          <div class="dl-pills">
+            <a class="dl-pill glass" href="https://apps.apple.com/en/app/v2raytun/id6476628951" target="_blank" rel="noopener">
+              <img src="ios.svg" alt="">
+              <span>v2RayTun на iPhone</span>
+              <svg class="dl-icon" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M8 12L3 7L4.4 5.55L7 8.15V0H9V8.15L11.6 5.55L13 7L8 12ZM2 16C1.45 16 0.979333 15.8043 0.588 15.413C0.196666 15.0217 0.000666667 14.5507 0 14V11H2V14H14V11H16V14C16 14.55 15.8043 15.021 15.413 15.413C15.0217 15.805 14.5507 16.0007 14 16H2Z" fill="white"/></svg>
+            </a>
+            <a class="dl-pill glass" href="https://play.google.com/store/apps/details?id=com.v2raytun.android" target="_blank" rel="noopener">
+              <img src="android.svg" alt="">
+              <span>v2RayTun на Android</span>
+              <svg class="dl-icon" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M8 12L3 7L4.4 5.55L7 8.15V0H9V8.15L11.6 5.55L13 7L8 12ZM2 16C1.45 16 0.979333 15.8043 0.588 15.413C0.196666 15.0217 0.000666667 14.5507 0 14V11H2V14H14V11H16V14C16 14.55 15.8043 15.021 15.413 15.413C15.0217 15.805 14.5507 16.0007 14 16H2Z" fill="white"/></svg>
+            </a>
+            <a class="dl-pill glass" href="https://storage.v2raytun.com/v2RayTun_Setup.exe" target="_blank" rel="noopener">
+              <img src="windows.svg" alt="">
+              <span>v2RayTun на Windows</span>
+              <svg class="dl-icon" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M8 12L3 7L4.4 5.55L7 8.15V0H9V8.15L11.6 5.55L13 7L8 12ZM2 16C1.45 16 0.979333 15.8043 0.588 15.413C0.196666 15.0217 0.000666667 14.5507 0 14V11H2V14H14V11H16V14C16 14.55 15.8043 15.021 15.413 15.413C15.0217 15.805 14.5507 16.0007 14 16H2Z" fill="white"/></svg>
+            </a>
+            <a class="dl-pill glass" href="https://apps.apple.com/en/app/v2raytun/id6476628951" target="_blank" rel="noopener">
+              <img src="macos.svg" alt="">
+              <span>v2RayTun на MacBook</span>
+              <svg class="dl-icon" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M8 12L3 7L4.4 5.55L7 8.15V0H9V8.15L11.6 5.55L13 7L8 12ZM2 16C1.45 16 0.979333 15.8043 0.588 15.413C0.196666 15.0217 0.000666667 14.5507 0 14V11H2V14H14V11H16V14C16 14.55 15.8043 15.021 15.413 15.413C15.0217 15.805 14.5507 16.0007 14 16H2Z" fill="white"/></svg>
+            </a>
+            <a class="dl-pill glass" href="https://apps.apple.com/en/app/v2raytun/id6476628951" target="_blank" rel="noopener">
+              <img src="ios.svg" alt="">
+              <span>v2RayTun на iPad</span>
+              <svg class="dl-icon" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M8 12L3 7L4.4 5.55L7 8.15V0H9V8.15L11.6 5.55L13 7L8 12ZM2 16C1.45 16 0.979333 15.8043 0.588 15.413C0.196666 15.0217 0.000666667 14.5507 0 14V11H2V14H14V11H16V14C16 14.55 15.8043 15.021 15.413 15.413C15.0217 15.805 14.5507 16.0007 14 16H2Z" fill="white"/></svg>
+            </a>
+            <a class="dl-pill glass" href="https://play.google.com/store/apps/details?id=com.v2raytun.android" target="_blank" rel="noopener">
+              <img src="androidtv.svg" alt="">
+              <span>v2RayTun на Android TV</span>
+              <svg class="dl-icon" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M8 12L3 7L4.4 5.55L7 8.15V0H9V8.15L11.6 5.55L13 7L8 12ZM2 16C1.45 16 0.979333 15.8043 0.588 15.413C0.196666 15.0217 0.000666667 14.5507 0 14V11H2V14H14V11H16V14C16 14.55 15.8043 15.021 15.413 15.413C15.0217 15.805 14.5507 16.0007 14 16H2Z" fill="white"/></svg>
+            </a>
+          </div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- How to -->
-  <section id="how" class="how-section" aria-label="Как подключиться">
-    <div class="container">
-      <h2 class="section-title">Как подключиться</h2>
-
-      <div class="how-grid">
-        <!-- Видео слева -->
-        <div class="how-video glass">
-          <div class="how-video-label">Видеоинструкция по подключению к VPN через v2RayTun</div>
-          <video class="how-video-el" controls preload="metadata" poster="guide-poster.png" playsinline>
-            <source src="guide.mp4" type="video/mp4">
-            Ваш браузер не поддерживает видео.
-          </video>
-        </div>
-
-        <!-- Шаги справа -->
-        <div class="how-steps">
-          <!-- Шаг 1 -->
-          <div class="how-step">
-            <div class="how-step-circle">1</div>
-            <div class="how-step-content">
-              <h3>Установи приложение</h3>
-              <p class="muted">Скачай v2RayTun для своей системы</p>
-              <a href="#download" class="how-btn">
-                <svg width="16" height="16" viewBox="0 0 16 16" fill="black" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M8 12L3 7L4.4 5.55L7 8.15V0H9V8.15L11.6 5.55L13 7L8 12ZM2 16C1.45 16 0.979333 15.8043 0.588 15.413C0.196666 15.0217 0.000666667 14.5507 0 14V11H2V14H14V11H16V14C16 14.55 15.8043 15.021 15.413 15.413C15.0217 15.805 14.5507 16.0007 14 16H2Z"/>
-                </svg>
-                Скачать
-              </a>
-            </div>
+    <section id="how" class="how-section" aria-label="Как подключиться">
+      <div class="container">
+        <h2 class="section-title">Как подключиться</h2>
+        <div class="how-grid">
+          <div class="how-video glass">
+            <div class="how-video-label">Видеоинструкция по подключению через v2RayTun</div>
+            <video class="how-video-el" controls preload="metadata" poster="guide-poster.png" playsinline>
+              <source src="guide.mp4" type="video/mp4">
+              Ваш браузер не поддерживает видео.
+            </video>
           </div>
 
-          <!-- Шаг 2 -->
-          <div class="how-step">
-            <div class="how-step-circle">2</div>
-            <div class="how-step-content">
-              <h3>Получи ключ у проверенного сервиса</h3>
-              <p class="muted">Для работы приложения нужен ключ. Очень важно получать ключ у надежного, доверенного сервиса</p>
-              <a href="https://t.me/SaturnVPN_bot?start=v2raytun" target="_blank" rel="noopener" class="how-btn key-btn">
-                <svg width="20" height="20" viewBox="0 0 20 20" fill="white" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M10 0C4.48 0 0 4.48 0 10C0 15.52 4.48 20 10 20C15.52 20 20 15.52 20 10C20 4.48 15.52 0 10 0ZM14.64 6.8C14.49 8.38 13.84 12.22 13.51 13.99C13.37 14.74 13.09 14.99 12.83 15.02C12.25 15.07 11.81 14.64 11.25 14.27C10.37 13.69 9.87 13.33 9.02 12.77C8.03 12.12 8.67 11.76 9.24 11.18C9.39 11.03 11.95 8.7 12 8.49C12.0069 8.45819 12.006 8.42517 11.9973 8.3938C11.9886 8.36244 11.9724 8.33367 11.95 8.31C11.89 8.26 11.81 8.28 11.74 8.29C11.65 8.31 10.25 9.24 7.52 11.08C7.12 11.35 6.76 11.49 6.44 11.48C6.08 11.47 5.4 11.28 4.89 11.11C4.26 10.91 3.77 10.8 3.81 10.45C3.83 10.27 4.08 10.09 4.55 9.9C7.47 8.63 9.41 7.79 10.38 7.39C13.16 6.23 13.73 6.03 14.11 6.03C14.19 6.03 14.38 6.05 14.5 6.15C14.6 6.23 14.63 6.34 14.64 6.42C14.63 6.48 14.65 6.66 14.64 6.8Z"/>
-                </svg>
-                Получить ключ
-              </a>
+          <div class="how-steps">
+            <div class="how-step">
+              <div class="how-step-circle">1</div>
+              <div class="how-step-content">
+                <h3>Установи приложение</h3>
+                <p class="muted">Скачай v2RayTun для своей системы</p>
+                <a href="#download" class="how-btn">
+                  <svg width="16" height="16" viewBox="0 0 16 16" fill="black" xmlns="http://www.w3.org/2000/svg"><path d="M8 12L3 7L4.4 5.55L7 8.15V0H9V8.15L11.6 5.55L13 7L8 12ZM2 16C1.45 16 0.979333 15.8043 0.588 15.413C0.196666 15.0217 0.000666667 14.5507 0 14V11H2V14H14V11H16V14C16 14.55 15.8043 15.021 15.413 15.413C15.0217 15.805 14.5507 16.0007 14 16H2Z"/></svg>
+                  Скачать
+                </a>
+              </div>
             </div>
-          </div>
 
-          <!-- Шаг 3 -->
-          <div class="how-step">
-            <div class="how-step-circle">3</div>
-            <div class="how-step-content">
-              <h3>Добавь ключ в приложение и пользуйся</h3>
-              <p class="muted">Нажмите на + и вставьте ваш ключ. Готово за 2 минуты.</p>
+            <div class="how-step">
+              <div class="how-step-circle">2</div>
+              <div class="how-step-content">
+                <h3>Получи ключ у проверенного сервиса</h3>
+                <p class="muted">Для работы приложения нужен ключ. Очень важно получать ключ у надежного, доверенного сервиса</p>
+                <a href="https://t.me/SaturnVPN_bot?start=v2raytun" target="_blank" rel="noopener" class="how-btn key-btn">
+                  <svg width="20" height="20" viewBox="0 0 20 20" fill="white" xmlns="http://www.w3.org/2000/svg"><path d="M10 0C4.48 0 0 4.48 0 10C0 15.52 4.48 20 10 20C15.52 20 20 15.52 20 10C20 4.48 15.52 0 10 0ZM14.64 6.8C14.49 8.38 13.84 12.22 13.51 13.99C13.37 14.74 13.09 14.99 12.83 15.02C12.25 15.07 11.81 14.64 11.25 14.27C10.37 13.69 9.87 13.33 9.02 12.77C8.03 12.12 8.67 11.76 9.24 11.18C9.39 11.03 11.95 8.7 12 8.49C12.0069 8.45819 12.006 8.42517 11.9973 8.3938C11.9886 8.36244 11.9724 8.33367 11.95 8.31C11.89 8.26 11.81 8.28 11.74 8.29C11.65 8.31 10.25 9.24 7.52 11.08C7.12 11.35 6.76 11.49 6.44 11.48C6.08 11.47 5.4 11.28 4.89 11.11C4.26 10.91 3.77 10.8 3.81 10.45C3.83 10.27 4.08 10.09 4.55 9.9C7.47 8.63 9.41 7.79 10.38 7.39C13.16 6.23 13.73 6.03 14.11 6.03C14.19 6.03 14.38 6.05 14.5 6.15C14.6 6.23 14.63 6.34 14.64 6.42C14.63 6.48 14.65 6.66 14.64 6.8Z"/></svg>
+                  Получить ключ
+                </a>
+              </div>
+            </div>
+
+            <div class="how-step">
+              <div class="how-step-circle">3</div>
+              <div class="how-step-content">
+                <h3>Добавь ключ в приложение и пользуйся</h3>
+                <p class="muted">Нажмите на + и вставьте ваш ключ. Готово за 2 минуты.</p>
+              </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- Pricing -->
-  <section id="pricing" aria-label="Стоимость VPN">
-    <div class="container">
-      <h2 class="section-title">Стоимость VPN</h2>
-      <div class="px-wrap">
-        <div class="px-top">
-          <article class="px-card px-card-left">
-            <h3 class="px-head">Честная стоимость без<br>необоснованных наценок</h3>
-            <div class="px-priceLine">
-              <span class="px-priceLabel">от</span>
-              <span class="px-priceValue">149&nbsp;₽/мес</span>
-            </div>
-            <div class="px-note">Платите только за то, чем пользуетесь</div>
-          </article>
-          <article class="px-card px-info">
-            <h3 class="px-infoTitle">Почему я должен платить?</h3>
-            <p class="px-infoText">Мы берем минимальную цену, необходимую для обеспечения стабильной работы вашего VPN. Бесплатные VPN не только не инвестируют в безопасность, но и несут угрозу вашим данным, часто нестабильны и подвергаются блокировкам, из-за чего вам приходится постоянно менять приложения. Платный VPN избавляет от этих неудобств и гарантирует надёжную работу каждый день.</p>
+    <section id="pricing" aria-label="Стоимость">
+      <div class="container">
+        <h2 class="section-title">Стоимость</h2>
+        <div class="px-wrap">
+          <div class="px-top">
+            <article class="px-card px-card-left">
+              <h3 class="px-head">Честная стоимость без<br>необоснованных наценок</h3>
+              <div class="px-priceLine">
+                <span class="px-priceLabel">от</span>
+                <span class="px-priceValue">149&nbsp;₽/мес</span>
+              </div>
+              <div class="px-note">Платите только за то, чем пользуетесь</div>
+            </article>
+            <article class="px-card px-info">
+              <h3 class="px-infoTitle">Почему я должен платить?</h3>
+              <p class="px-infoText">Мы берем минимальную цену, необходимую для обеспечения стабильной работы вашего соединения. Бесплатные сервисы не только не инвестируют в безопасность, но и несут угрозу вашим данным, часто нестабильны и подвергаются блокировкам, из-за чего вам приходится постоянно менять приложения. Платный сервис избавляет от этих неудобств и гарантирует надёжную работу каждый день.</p>
+            </article>
+          </div>
+          <a class="px-cta" href="https://t.me/SaturnVPN_bot?start=v2raytun" target="_blank" rel="noopener">
+            <span class="px-ctaIcon" aria-hidden="true">
+              <svg width="20" height="20" viewBox="0 0 20 20" fill="white" xmlns="http://www.w3.org/2000/svg"><path d="M10 0C4.48 0 0 4.48 0 10C0 15.52 4.48 20 10 20C15.52 20 20 15.52 20 10C20 4.48 15.52 0 10 0ZM14.64 6.8C14.49 8.38 13.84 12.22 13.51 13.99C13.37 14.74 13.09 14.99 12.83 15.02C12.25 15.07 11.81 14.64 11.25 14.27C10.37 13.69 9.87 13.33 9.02 12.77C8.03 12.12 8.67 11.76 9.24 11.18C9.39 11.03 11.95 8.7 12 8.49C12.0069 8.45819 12.006 8.42517 11.9973 8.3938C11.9886 8.36244 11.9724 8.33367 11.95 8.31C11.89 8.26 11.81 8.28 11.74 8.29C11.65 8.31 10.25 9.24 7.52 11.08C7.12 11.35 6.76 11.49 6.44 11.48C6.08 11.47 5.4 11.28 4.89 11.11C4.26 10.91 3.77 10.8 3.81 10.45C3.83 10.27 4.08 10.09 4.55 9.9C7.47 8.63 9.41 7.79 10.38 7.39C13.16 6.23 13.73 6.03 14.11 6.03C14.19 6.03 14.38 6.05 14.5 6.15C14.6 6.23 14.63 6.34 14.64 6.42C14.63 6.48 14.65 6.66 14.64 6.8Z"/></svg>
+            </span>
+            <span>Получить пробный ключ</span>
+          </a>
+          <article class="px-mini px-mini--full">
+            <h4 class="px-miniTitle">Гарантируем работу в мобильной сети и Wi-Fi</h4>
           </article>
         </div>
-        <a class="px-cta" href="https://t.me/SaturnVPN_bot?start=v2raytun" target="_blank" rel="noopener">
-          <span class="px-ctaIcon" aria-hidden="true">
-            <svg width="20" height="20" viewBox="0 0 20 20" fill="white" xmlns="http://www.w3.org/2000/svg"><path d="M10 0C4.48 0 0 4.48 0 10C0 15.52 4.48 20 10 20C15.52 20 20 15.52 20 10C20 4.48 15.52 0 10 0ZM14.64 6.8C14.49 8.38 13.84 12.22 13.51 13.99C13.37 14.74 13.09 14.99 12.83 15.02C12.25 15.07 11.81 14.64 11.25 14.27C10.37 13.69 9.87 13.33 9.02 12.77C8.03 12.12 8.67 11.76 9.24 11.18C9.39 11.03 11.95 8.7 12 8.49C12.0069 8.45819 12.006 8.42517 11.9973 8.3938C11.9886 8.36244 11.9724 8.33367 11.95 8.31C11.89 8.26 11.81 8.28 11.74 8.29C11.65 8.31 10.25 9.24 7.52 11.08C7.12 11.35 6.76 11.49 6.44 11.48C6.08 11.47 5.4 11.28 4.89 11.11C4.26 10.91 3.77 10.8 3.81 10.45C3.83 10.27 4.08 10.09 4.55 9.9C7.47 8.63 9.41 7.79 10.38 7.39C13.16 6.23 13.73 6.03 14.11 6.03C14.19 6.03 14.38 6.05 14.5 6.15C14.6 6.23 14.63 6.34 14.64 6.42C14.63 6.48 14.65 6.66 14.64 6.8Z"/></svg>
-          </span>
-          <span>Получить пробный ключ</span>
-        </a>
-        <article class="px-mini px-mini--full">
-          <h4 class="px-miniTitle">Гарантируем работу в мобильной сети и Wi-Fi</h4>
-        </article>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- Features -->
-  <section id="features">
-    <div class="container">
-      <h2 class="section-title">Почему v2RayTun + VLESS</h2>
-      <div class="grid">
-        <article class="glass card">
-          <h3>Всегда на связи</h3>
-          <p class="muted">Не нужно постоянно включать и выключать VPN — он просто работает в фоне, обеспечивая стабильный доступ к любым сайтам и приложениям.</p>
-        </article>
-        <article class="glass card">
-          <h3>Работают все сервисы</h3>
-          <p class="muted">Смотрите видео, общайтесь в мессенджерах, играйте онлайн и используйте рабочие инструменты без ограничений.</p>
-        </article>
-        <article class="glass card">
-          <h3>Маскировка под обычный трафик</h3>
-          <p class="muted">Ваш трафик выглядит как обычный интернет-серфинг, что помогает обходить блокировки даже в сложных условиях.</p>
-        </article>
-        <article class="glass card">
-          <h3>Конфиденциальность</h3>
-          <p class="muted">Мы не ведём журналы использования. Ваша активность остаётся только вашей.</p>
-        </article>
-        <article class="glass card">
-          <h3>Скорость без компромиссов</h3>
-          <p class="muted">Оптимизированные подключения позволяют смотреть видео в высоком качестве и звонить без задержек.</p>
-        </article>
-        <article class="glass card">
-          <h3>Доступен для любых систем</h3>
-          <p class="muted">Скачайте приложение, получите ключ — и вы уже в сети на любом устройстве, без сложных настроек и инструкций.</p>
-        </article>
+    <section id="features">
+      <div class="container">
+        <h2 class="section-title">Почему v2RayTun + VLESS</h2>
+        <div class="grid">
+          <article class="glass card">
+            <h3>Всегда на связи</h3>
+            <p class="muted">Не нужно постоянно включать и выключать — он просто работает, обеспечивая стабильный доступ к любым сайтам и приложениям.</p>
+          </article>
+          <article class="glass card">
+            <h3>Работают все сервисы</h3>
+            <p class="muted">Смотрите видео, общайтесь в мессенджерах, играйте онлайн и используйте рабочие инструменты без ограничений.</p>
+          </article>
+          <article class="glass card">
+            <h3>Маскировка под обычный трафик</h3>
+            <p class="muted">Ваш трафик выглядит как обычный интернет-серфинг, что помогает обходить блокировки даже в сложных условиях.</p>
+          </article>
+          <article class="glass card">
+            <h3>Конфиденциальность</h3>
+            <p class="muted">Мы не ведём журналы использования. Ваша активность остаётся только вашей.</p>
+          </article>
+          <article class="glass card">
+            <h3>Скорость без компромиссов</h3>
+            <p class="muted">Оптимизированные подключения позволяют смотреть видео в высоком качестве и звонить без задержек.</p>
+          </article>
+          <article class="glass card">
+            <h3>Доступен для любых систем</h3>
+            <p class="muted">Скачайте приложение, получите ключ — и вы уже в сети на любом устройстве, без сложных настроек и инструкций.</p>
+          </article>
+        </div>
       </div>
-    </div>
-</section>
+    </section>
 
-  <!-- FAQ -->
-  <section id="faq">
-    <div class="container">
-      <h2 class="section-title">FAQ</h2>
-      <div class="accordion" id="accordion">
-        <div class="acc-item">
-          <div class="acc-head"><strong>Что такое VLESS и чем он отличается от VMess?</strong><span>＋</span></div>
-          <div class="acc-body"><div class="acc-body-inner">VLESS — лёгкий транспорт в экосистеме Xray/V2Ray с UUID-аутентификацией. Он не содержит встроенного шифрования и обычно работает совместно с TLS для защиты канала.</div></div>
-        </div>
-        <div class="acc-item">
-          <div class="acc-head"><strong>Какие клиенты поддерживаются?</strong><span>＋</span></div>
-          <div class="acc-body"><div class="acc-body-inner">Рекомендуем: v2RayTun (iOS/Android), v2rayN (Windows/macOS/Linux), v2rayNG (Android), sing-box (кроссплатформенно).</div></div>
-        </div>
-        <div class="acc-item">
-          <div class="acc-head"><strong>Как импортировать ключ?</strong><span>＋</span></div>
-          <div class="acc-body"><div class="acc-body-inner">Скопируйте ссылку формата <code>vless://...</code> из бота v2RayTun и используйте функцию «Импорт по ссылке» или отсканируйте QR-код в вашем клиенте.</div></div>
-        </div>
-        <div class="acc-item">
-          <div class="acc-head"><strong>Работает ли на устройствах с ARM и Apple Silicon?</strong><span>＋</span></div>
-          <div class="acc-body"><div class="acc-body-inner">Да. Современные клиенты и сборки ядра Xray/V2Ray доступны для ARM64 (включая Apple M-серии) и большинства мобильных устройств.</div></div>
+    <section id="faq">
+      <div class="container">
+        <h2 class="section-title">FAQ</h2>
+        <div class="accordion" id="accordion">
+          <div class="acc-item">
+            <div class="acc-head"><strong>Что такое VLESS и чем он отличается от VMess?</strong><span>＋</span></div>
+            <div class="acc-body"><div class="acc-body-inner">VLESS — лёгкий транспорт в экосистеме Xray/V2Ray с UUID-аутентификацией. Он не содержит встроенного шифрования и обычно работает совместно с TLS для защиты канала.</div></div>
+          </div>
+          <div class="acc-item">
+            <div class="acc-head"><strong>Какие клиенты поддерживаются?</strong><span>＋</span></div>
+            <div class="acc-body"><div class="acc-body-inner">Рекомендуем: v2RayTun (iOS/Android), v2rayN (Windows/macOS/Linux), v2rayNG (Android), sing-box (кроссплатформенно).</div></div>
+          </div>
+          <div class="acc-item">
+            <div class="acc-head"><strong>Как импортировать ключ?</strong><span>＋</span></div>
+            <div class="acc-body"><div class="acc-body-inner">Скопируйте ссылку формата <code>vless://...</code> из бота v2RayTun и используйте функцию «Импорт по ссылке» или отсканируйте QR-код в вашем клиенте.</div></div>
+          </div>
+          <div class="acc-item">
+            <div class="acc-head"><strong>Работает ли на устройствах с ARM и Apple Silicon?</strong><span>＋</span></div>
+            <div class="acc-body"><div class="acc-body-inner">Да. Современные клиенты и сборки ядра Xray/V2Ray доступны для ARM64 (включая Apple M-серии) и большинства мобильных устройств.</div></div>
+          </div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- SEO контент -->
-  <section aria-label="SEO контент">
-    <div class="container">
-      <div class="sr-only">
-        v2RayTun — VPN на основе VLESS, V2Ray, Xray Core и sing-box для Windows 11, Windows 10, macOS Sonoma, macOS Ventura, Ubuntu, Debian, Arch Linux, Fedora, FreeBSD, OpenBSD, Android 14/13/12, iOS 18/17, iPadOS.
-        Ключевые запросы: VPN для Windows, VPN для macOS, VPN для Linux, VPN для Android, VPN для iPhone, VLESS конфигурация, VLESS TLS, v2RayTun iOS, v2RayTun Android, v2rayN download, v2rayNG apk, sing-box config, Xray Reality, WebSocket, H2, gRPC, UUID, импорт VLESS-ссылки, Telegram VPN bot,  bot.
+    <section aria-label="SEO контент">
+      <div class="container">
+        <div class="sr-only">
+          v2RayTun — VPN на основе VLESS, V2Ray, Xray Core и sing-box для Windows 11, Windows 10, macOS Sonoma, macOS Ventura, Ubuntu, Debian, Arch Linux, Fedora, FreeBSD, OpenBSD, Android 14/13/12, iOS 18/17, iPadOS.
+          Ключевые запросы: VPN для Windows, VPN для macOS, VPN для Linux, VPN для Android, VPN для iPhone, VLESS конфигурация, VLESS TLS, v2RayTun iOS, v2RayTun Android, v2rayN download, v2rayNG apk, sing-box config, Xray Reality, WebSocket, H2, gRPC, UUID, импорт VLESS-ссылки, Telegram VPN bot,  bot.
+        </div>
       </div>
-    </div>
-  </section>
+    </section>
   </main>
 
   <footer>
@@ -600,8 +420,6 @@
         item.classList.toggle('open');
       });
     });
-
-    document.getElementById('year').textContent = new Date().getFullYear();
   </script>
 </body>
 </html>
